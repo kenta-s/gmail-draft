@@ -1,10 +1,9 @@
 # Gmail::Draft
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/gmail/draft`. To experiment with that code, run `bin/console` for an interactive prompt.
+GmailDraft helps you create Gmail drafts more easily by using Ruby.  
+It let you avoid implementing a complicated coding on handling Gmail API to do so.
 
-TODO: Delete this and the text above, and describe your gem
-
-## Prerequisite
+## Preparation
 
 You need to create an application and have client_secret.json to use Gmail API.  
 see:
