@@ -60,7 +60,7 @@ TEXT
 Then, initialize a Gmail::Draft::Jp instance with the string you just declared.
 ```ruby
 draft = Gmail::Draft::Jp.new(text)
-draft.creat_draft
+draft.create_draft
 ```
 
 Subject and Body can handle Japanese characters.
