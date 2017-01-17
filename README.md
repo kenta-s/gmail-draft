@@ -1,7 +1,7 @@
 # Gmail::Draft
 
 GmailDraft helps you create Gmail drafts more easily by using Ruby.  
-It let you avoid implementing a complicated coding on handling Gmail API to do so.
+It lets you avoid implementing a complicated coding on handling Gmail API to do so.
 
 ## Preparation
 
