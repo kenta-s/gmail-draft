@@ -34,6 +34,9 @@ client_secrets_path: "/Path/to/your/client_secret.json"
 ```
 ## Usage
 
+First, require this.
+`require 'gmail/draft'`
+
 Create a string for the draft like this:
 ```ruby
 text =<<TEXT
