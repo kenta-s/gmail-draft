@@ -4,6 +4,12 @@ Welcome to your new gem! In this directory, you'll find the files you need to be
 
 TODO: Delete this and the text above, and describe your gem
 
+## Prerequisite
+
+You need to create an application and have client_secret.json to use Gmail API.  
+see:
+https://developers.google.com/gmail/api/quickstart/ruby
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -20,9 +26,44 @@ Or install it yourself as:
 
     $ gem install gmail-draft
 
+Put a yaml file named `gmail_draft.yml` to your application's root directory.
+the yaml file is like: 
+```yaml
+application_name: Your application name 
+client_secrets_path: "/Path/to/your/client_secret.json"
+```
 ## Usage
 
-TODO: Write usage instructions here
+Create a string for the draft like this:
+```ruby
+text =<<TEXT
+To: foo@example.com
+Cc: bar@example.com, baz@example.com
+Subject: Hello, my friend
+
+Lorem ipsum dolor sit amet,
+consectetur adipiscing elit,
+sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Excepteur sint occaecat cupidatat non proident,
+sunt in culpa qui officia deserunt mollit anim id est laborum.
+TEXT
+```
+
+Then, initialize a Gmail::Draft::Jp instance with the string you just declared.
+```ruby
+draft = Gmail::Draft::Jp.new(text)
+draft.creat_draft
+```
+
+Subject and Body can handle Japanese characters.
+
+NOTE: First time you initialize Gmail::Draft::Jp, it requires authorization.  
+Just follow the instruction.
 
 ## Development
 
